@@ -1,15 +1,31 @@
-# project
+To run the notebook, follow the instructions below for Windows:
 
-Please place your Jupyter notebook in this directory, so that other students can
-access your presentation materials.  This repository should contain all
-appropriate code to follow along with your presentation This way, your fellow
-students will be able to run your code on their personal machines during your
-presentation.
+1. Install miniconda https://docs.conda.io/en/latest/miniconda.html
 
-If you are not preparing a Jupyter notebook for your topic, please use this
-repository in an appropriate way: put your Python package in here, or put links
-to your created work for your project in the README, or setup this repository so
-that students can file issues and/or make pull requests, or whatever.
+2. Open miniconda terminal. All steps below are typed in the terminal.
 
-This repository is public, such that your fellow students can clone the
-repository.
+3. Install Jupyter Notebook in terminal:
+conda install jupyter notebook
+
+3b. If there is an error with step 4, this step is required. Find these two files in anaconda3>Library>bin:
+libcrypto-1_1-x64.dll libssl-1_1-x64.dll and then copy and paste it to anaconda3>DLLs. Restart the pc.
+
+Refer to here if the issue persists:
+https://github.com/conda/conda/issues/11982
+
+4. Install pytorch:
+conda install pytorch torchvision -c pytorch
+
+5. Install fast ai:
+conda install -c pytorch -c fastai fastai=1.0.61
+conda install -c fastai fastdownload
+
+6. Install dependencies:
+pip install -U duckduckgo_search
+conda install fastbook -c fastai
+pip install fastcore fastai --upgrade
+
+7. Open Jupyter Notebook through terminal:
+jupyter notebook
+
+8. The notebook should run now.
